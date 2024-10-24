@@ -12,7 +12,7 @@ public class NextPermutation {
         if(idx1==-1) {
             reverse(arr, 0, arr.length - 1);
         }else{
-            // If no valid idx1 is found, reverse the array to get the smallest permutation
+            //Step 2: Find the first greater element from right till index1
             for(int j = arr.length-1;j>idx1;j--){
                 if(arr[j] > arr[idx1]){
                     // Step 3: Swap arr[idx1] with arr[j]
