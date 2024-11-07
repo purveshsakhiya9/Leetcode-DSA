@@ -13,7 +13,6 @@ public class Zfunction {
                 if(flag ==0){
                     return i;
                 }
-
             }
         }
         return -1;
