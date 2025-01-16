@@ -51,13 +51,11 @@ public class CountSubsetsWithSumK {
         for(int n:num) totSum+=n;
         int n = num.length;
         int[][] dp = new int[n][totSum+1];
-        for(int i = 0; i<n;i++){
-            dp[i][0] = 1;
-        }
-        if(num[0]<=totSum){
+        if(num[0]==0) dp[0][0] = 2;
+        else dp[0][0] =1;
+        if(num[0]!=0 && num[0]<=totSum){
             dp[0][num[0]] = 1;
         }
-
         for(int ind = 1;ind<n;ind++){
             for(int sum = 0; sum<=totSum;sum++){
                 int nonTake = dp[ind-1][sum];
@@ -66,9 +64,6 @@ public class CountSubsetsWithSumK {
                     take = dp[ind-1][sum-num[ind]];
                 }
                 dp[ind][sum] = (take+nonTake)%MOD;
-                if(num[ind]==0){
-                    dp[ind][sum] = (2*dp[ind-1][sum])%MOD;
-                }
             }
         }
         return dp[n-1][tar];
@@ -78,8 +73,9 @@ public class CountSubsetsWithSumK {
         for(int n:num) totSum+=n;
         int n = num.length;
         int[] prev = new int[totSum+1];
-        prev[0]=1;
-        if(num[0]<=totSum){
+        if(num[0]==0) prev[0] = 2;
+        else prev[0] =1;
+        if(num[0]!=0 && num[0]<=totSum){
             prev[num[0]] = 1;
         }
 
@@ -92,9 +88,6 @@ public class CountSubsetsWithSumK {
                     take = prev[sum-num[ind]];
                 }
                 curr[sum] = (take+nonTake)%MOD;
-                if(num[ind]==0){
-                    curr[sum] = (2*prev[sum])%MOD;
-                }
             }
             prev=curr;
         }
