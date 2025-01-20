@@ -93,15 +93,15 @@ public class LongestCommonSubsequence {
         System.out.println(longestCommonSubsequenceMemoization(a1,a2));
 
         //Using Tabulation
-        // Time Complexity: O(N) + O(N*totSum) + O(N)
-        // Space Complexity: O(N*TotalSum)
+        // Time Complexity: O(N) + O(N*M) + O(N)
+        // Space Complexity: O(N*M)
         System.out.println("Using Tabulation: ");
         System.out.println(longestCommonSubsequenceTabulation(s1,s2));
         System.out.println(longestCommonSubsequenceTabulation(a1,a2));
 
         //Using Space Optimized
-        // Time Complexity: O(N) + O(N*totSum) + O(N)
-        // Space Complexity: O(TotalSum)
+        // Time Complexity: O(N) + O(N*M) + O(N)
+        // Space Complexity: O(M)
         System.out.println("Using Space Optimized: ");
         System.out.println(longestCommonSubsequenceSpaceOptimized(s1,s2));
         System.out.println(longestCommonSubsequenceSpaceOptimized(a1,a2));
