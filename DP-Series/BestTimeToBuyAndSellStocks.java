@@ -11,10 +11,8 @@ public class BestTimeToBuyAndSellStocks {
     public static void main(String[] args){
         int[] arr = {1,2,3,4};
         int[] arr1 = {2,2,2,2};
-        // Using Recursion
-        // Time Complexity:
-        // Space Complexity:
-        System.out.println("Using Recursion: ");
+        // Time Complexity: O(N)
+        // Space Complexity: O(1)
         System.out.println(bestTimeToBuyAndSellStocks(arr));
         System.out.println(bestTimeToBuyAndSellStocks(arr1));
     }
