@@ -126,15 +126,15 @@ public class WildcardMathcing {
         System.out.println(wildcarMatchingMemoization(a1,a2));
 
         // Using Tabulation
-        // Time Complexity:
-        // Space Complexity:
+        // Time Complexity: O(M*N)
+        // Space Complexity: O(M*N)
         System.out.println("Using Tabulation: ");
         System.out.println(wildcardMatchingTabulation(s1,s2));
         System.out.println(wildcardMatchingTabulation(a1,a2));
 
         // Using Space Optimized
-        // Time Complexity:
-        // Space Complexity:
+        // Time Complexity: O(M*N)
+        // Space Complexity: O(N)
         System.out.println("Using Space Optimized: ");
         System.out.println(wildcardMatchingSpaceOptimized(s1,s2));
         System.out.println(wildcardMatchingSpaceOptimized(a1,a2));
